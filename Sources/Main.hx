@@ -5,8 +5,8 @@ import kha.Scheduler;
 import kha.Assets;
 
 class Main {
-	public static var WIDTH = 1024;
-	public static var HEIGHT = 768;
+	public static var WIDTH = 1200;
+	public static var HEIGHT = 734;
 
 	public static function main(){
 		System.start({

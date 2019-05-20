@@ -3,8 +3,8 @@ package;
 import kha.math.Vector2;
 
 class Ray{
-	var pos:Vector2 = new Vector2();
-	var dir:Vector2 = new Vector2();
+	public var pos:Vector2 = new Vector2();
+	public var dir:Vector2 = new Vector2();
 
 	public function new(pos: Vector2, angle: Float){
 		this.pos = pos;
@@ -21,6 +21,10 @@ class Ray{
 	public function show(g2: kha.graphics2.Graphics): Void {
 		//g2.translate(this.pos.x, this.pos.y);
 		g2.drawLine(0, 0, this.dir.x * 10, this.dir.y * 10);
+	}
+
+	public function setAngle(angle: Float){
+		this.dir = new Vector2(1 * Math.cos(angle), 1 * Math.sin(angle));
 	}
 
 	public function castwall(wall:Boundary): Vector2{
